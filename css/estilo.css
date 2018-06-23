@@ -1,0 +1,147 @@
+
+/*--------- TIPO LETRA GENERAL ---------*/
+
+body{
+		position: center;
+	}
+
+
+/*---------DISEÑO DE EL MENU DE NAVEGACIÓN ---------*/
+/*ABUELO*/
+
+/*elementos de bloque, espacio entre cada link, tamaño, fondo, margen del boton*/
+.navbar{
+	font-family: 'Baloo Bhaina';
+	display: flex;
+	justify-content: space-between;
+	height: 60px;
+	background: #00526C;
+	margin-bottom: 60px;
+}
+
+/*PADRE*/
+
+/*
+Alinearemos cada uno de los enlaces de manera vertical con Display: flex (para manejar su alineacion vertical como horizontal),
+y les diremos que su alineacion sea centrada en ambos casos con  
+	justify-content: center;
+	align-items: center;
+
+*/
+	.navbar a{ 
+
+		flex: 1 ;
+		display: flex;
+		/*alineación horizontal*/
+		justify-content: center;
+		/*alineación vertical*/
+		align-items: center;
+		color: white; 
+		/*Sin subrayado*/
+		text-decoration: none;
+		/*centrados desde su propio enlace*/
+		text-align: center;
+		/*Borde blanco a la derecha, para separar cada boton*/
+		border-right: 2px solid white;
+		/*fuente de letra y tamaño*/
+		font: 20px 'Baloo Bhaina';
+		/*Declaramos su posicion relativa y con el "hijo" le declaramos una posicion absoluta*/
+		position: relative;
+
+	}
+
+
+/*HIJO*/
+	.navbar a.active:after{ 
+		content: "";
+		/*tamaño del borde le boton en la parte de abajo*/ 
+		height: 5px;/*Alto*/
+		width: 80%;/*Ancho*/
+		/*color*/
+		background:  #02648e; 
+		/*posición*/
+		position: absolute;
+		bottom: 0;
+		/*valor que se le suma al 80% para que sobre un 10% al lado derecho y de tal manera se vea centrado la barrita*/
+		left: 10%;
+	} 
+
+.arriba a{
+	/*Fuente de letra google font*/		
+	font-family:'Baloo Bhaina';
+}
+
+/*Cuando se le da Click a algun botón del menú este cambie la letra a color negro*/
+.navbar a:active{
+	color: black;
+}
+
+/*---------MOVIMIENTO DEL LOGO EN EL PRIMER CONTENEDOR ---------*/
+
+/*Cambio del tamaño del logo*/
+.logo{
+	height: 130px;
+}
+
+.logo a:hove{
+	transform: none;
+	background-color: white;
+}
+
+h4{
+	font-size: xx-large;
+	text-align: center;
+	font-family: 'Fjalla One';
+}
+h3{
+	font-family: 'Fjalla One';	
+}
+th{
+	background: #00526C;
+	font-family: "Baloo Bhaina";
+	color: #ffffff;
+}
+td{
+	font-family: 'Inconsolata';
+}
+td, th { 
+	border: 1px solid black;
+	width:33%;
+}
+table {
+	border-spacing: 1px;
+	border-collapse: collapse;
+	width:50%;
+}
+
+
+.pie_de-pagina {
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	display: flex;
+	text-align: left;
+	height: 100px;
+	width: 700px;
+}
+.cont_cantactenos{
+	color: white;
+	font-family: 'trebuchet MS';
+	list-style-type: none;
+}
+.texto_cantactenos{
+	text-align: left;
+	font-family: 'Baloo Bhaina';
+	font-size: 30px;
+
+}
+
+footer{	
+
+  	bottom: 0;
+	background-color: #00526C;
+	height: auto;
+	color: #FFFFFF;
+	padding: 5px;
+
+}
